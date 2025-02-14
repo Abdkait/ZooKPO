@@ -3,7 +3,6 @@ package zoo.factories;
 import zoo.domains.*;
 import zoo.params.AnimalParams;
 import zoo.params.HerboParams;
-import lombok.Getter;
 import org.springframework.stereotype.Component;
 
 import java.util.Map;
@@ -20,6 +19,9 @@ public class AnimalFactory {
 
         try {
             if (isHerbo(type)) {
+                if (kindness == null || kindness < 0 || kindness > 10) {
+                    throw new IllegalArgumentException("Invalid kindness level.");
+                }
                 return animalClass.getConstructor(HerboParams.class).newInstance(new HerboParams(food, kindness));
             } else {
                 return animalClass.getConstructor(AnimalParams.class).newInstance(new AnimalParams(food));

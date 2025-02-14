@@ -16,17 +16,14 @@ repositories {
 }
 
 dependencies {
-    // Spring Boot Starter (включает в себя Spring Core и DI-контейнер)
     implementation("org.springframework.boot:spring-boot-starter")
 
     compileOnly("org.projectlombok:lombok:1.18.30")
     annotationProcessor("org.projectlombok:lombok:1.18.30")
 
-    // JUnit 5 для тестирования
     testImplementation(platform("org.junit:junit-bom:5.10.0"))
     testImplementation("org.junit.jupiter:junit-jupiter")
 
-    // Spring Boot Test (для интеграционных тестов)
     testImplementation("org.springframework.boot:spring-boot-starter-test")
 }
 

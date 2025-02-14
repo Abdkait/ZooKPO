@@ -1,7 +1,7 @@
-package hse.zoo.services;
+package zoo.services;
 
-import hszoo.factories.AnimalFactory;
-import e.zoo.factories.ThingFactory;
+import zoo.factories.AnimalFactory;
+import zoo.factories.ThingFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
